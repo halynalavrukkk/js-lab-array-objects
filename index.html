@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота: Об'єкти та масиви</title>
+    <style>
+        :root {
+            --bg-color: #f7f4f0;
+            --card-bg: #eae3d9;
+            --primary: #8c6d58;
+            --primary-hover: #725441;
+            --text-color: #4a3b32;
+            --border-color: #d8ccbc;
+            --accent: #b59882;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--text-color);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(74, 59, 50, 0.05);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .buttons-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .output {
+            background-color: #fcfbf9;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 40px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна робота: Об'єкти та масиви</h1>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>Завдання 1: Книга (Об'єкт)</h2>
+            <div class="buttons-group">
+                <button onclick="showBookInfo()">Показати інфо про книгу</button>
+                <button onclick="toggleBookRead()">Змінити стан "Прочитана"</button>
+            </div>
+            <div id="out-task1" class="output">Натисніть кнопку вище...</div>
+        </div>
+
+        <div class="card">
+            <h2>Завдання 2 & 3: Бібліотека книг</h2>
+            <div class="buttons-group">
+                <button onclick="showAllBooks()">Усі книги</button>
+                <button onclick="addDefaultBook()">Додати нову книгу (push)</button>
+                <button onclick="sortBooksByYear()">Сортувати за роком</button>
+                <button onclick="filterUnreadBooks()">Непрочитані книги</button>
+                <button onclick="findTolkien()">Знайти книгу Толкіна</button>
+                <button onclick="showAvgYear()">Середній рік видання</button>
+            </div>
+            <div id="out-library" class="output">Натисніть кнопку для виводу даних...</div>
+        </div>
+
+        <div class="card">
+            <h2>Завдання 4: Інтерактивне додавання</h2>
+            <div class="buttons-group">
+                <button onclick="addBookPrompt()">Додати книгу через Prompt</button>
+            </div>
+            <div id="out-prompt" class="output">Очікування дії користувача...</div>
+        </div>
+
+        <div class="card">
+            <h2>Індивідуальний проєкт: Колекція відеоігор</h2>
+            <div class="buttons-group">
+                <button onclick="showAllGames()">Усі ігри</button>
+                <button onclick="filterUncompletedGames()">Непройдені ігри</button>
+                <button onclick="findEldenRing()">Знайти Elden Ring</button>
+                <button onclick="sortGamesByYear()">Сортувати за роком (спадання)</button>
+            </div>
+            <div id="out-games" class="output">Натисніть кнопку вище...</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
